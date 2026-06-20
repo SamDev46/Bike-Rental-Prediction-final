@@ -304,7 +304,6 @@ def load_available_models():
             except:
                 pass
     
-    # Also try to load the original model as fallback
     if not available_models and os.path.exists('bike_model.pkl'):
         try:
             with open('bike_model.pkl', 'rb') as f:
@@ -456,7 +455,6 @@ elif st.session_state.page == "Analytics":
     </style>
     """, unsafe_allow_html=True)
 
-# Add a separator line
 st.markdown("<hr style='border-color: rgba(56,189,248,0.1); margin: 20px 0 30px 0;'>", unsafe_allow_html=True)
 
 
